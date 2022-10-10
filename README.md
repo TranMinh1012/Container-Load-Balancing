@@ -152,3 +152,66 @@ Một số tính năng nổi bật của Burpsuite:
       + Spider & Discover Content: crawl link có trong ứng dụng web.
       + Scanner (chỉ có trong bản Pro): đây là một mô đun khác mạnh mẽ, nó tự động quét các lỗ hổng trong ứng dụng web (XSS, SQLi, Command Injection, File Inclusion,…).
             
+# Python socket:
+
+https://stackoverflow.com/questions/28670835/python-socket-client-post-parameters
+
+https://www.internalpointers.com/post/making-http-requests-sockets-python
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Cloud Load Balancing
+
+Là quá trình phân phối tài nguyên điện toán và khối lượng công việc và trong môi trường điện toán đám mây.
+
+Giống như các giải pháp cân bằng tải khác, Cloud Load Balancing tối đa hóa tính khả dụng của tài nguyên và giảm chi phí hệ thống quản lý tài liệu.
+
+Cloud Load Balancing phân bổ tính toán các tài nguyên và khối lượng công việc đồng đều trong môi trường đám mây để đảm bảo rằng các ứng dụng đám mây đạt được độ tin cậy và hiệu quả cao hơn. Các doang nghiệp sử dụng cloud load balancing để lưu trữ các tài nguyên phân tán giữa một số máy chủ ứng dụng, máy tính hoặc mạng để quản lý các yêu cầu của khách hàng một cách hiệu quả.
+
+Giải pháp cloud load balancing có thể:
+
+      + Tự động triển khai ứng dụng
+      + Giúp bảo vệ các ứng dụng quan trọng của nhiệm vụ khỏi các lỗ hổng bảo mật
+      + Tích hợp với các quy trình CI/CD
+      + Di chuyển khối lượng công việc trên các đám mây công cộng
+      + Cung cấp những hiểu biết chi tiết về trải nghiệm người dùng cuối
+      + Cung cấp thang đo đàn hồi dựa trên tải ứng dụng
+     
+# Cloud Load Balancing Techniques
+
+Cân bằng tải máy chủ đám mây tăng tốc hiệu suất, duy trì khả năng phục hồi ứng dụng và các dịch vụ và ứng dụng bảo vệ trong đám mây từ những thất bại chưa từng có. Dưới đây là cái nhìn kỹ hơn về một số tính năng của các thuật toán cân bằng tải đám mây và cách chúng được sử dụng.
+
+      + Tự động hóa liền mạch
+      + Hỗ trợ cho nhiều giao thức
+      + Kiểm tra tình trạng hệ thống
+      + Hiệu suất cao
+
+# Lợi ích của việc cân bằng tải trong đám mây
+
+      + Tự động hóa dễ dàng hơn
+      + Ứng dụng hiệu suất cao
+      + Quản lý liền mạch của sự gia tăng lưu lượng dữ liệu
+      + Mềm dẻo
+      + Độ tin cậy và khả năng mở rộng
+      + Hiệu quả chi phí
+      + Quản lý API khẩn cấp
+ 
+
+**https://avinetworks.com/glossary/cloud-load-balancing/**
+
+**https://middleware.io/blog/cloud-load-balancing/**
+
+https://www.techtarget.com/searchcloudcomputing/definition/cloud-load-balancing
+
+https://www.researchgate.net/figure/Cloud-Load-Balancing-Architecture-System-Model-The-proposed-system-model-based_fig1_317041605
