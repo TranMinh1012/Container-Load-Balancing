@@ -99,4 +99,56 @@ HTTP status code là yếu tố quan trọng trong HTTP message response đượ
       + 500 Internal Server Error: Một thông báo chung, được đưa ra khi máy chủ gặp phải một trường hợp bất ngờ, message cụ thể không phù hợp.
       
       + 505 HTTP Version Not Supported: Máy chủ không hỗ trợ phiên bản “giao thức HTTP”.
+     
+- header Host: Chỉ định máy chủ và port của máy chủ mà yêu cầu đang được gửi. Nếu không có cổng nào được bao gồm, cổng mặc định của yêu cầu được sử dụng (443 cho URL HTTPS và 80 cho URL HTTP)   
+- User-Agent: chứa thông tin về tác nhân người sử dụng tạo yêu cầu: ứng dụng, hệ điều hành, nhà cung cấp và phiên bản. Ví dụ: User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36
+- Content-Type: Trường này chỉ dẫn kiểu phương tiện của phần thân đối tượng được gửi tới người nhận. Ví dụ: Content-Type: application/json; charset=utf-8
+- Content-Length: Cho biết kích thước của thân thông báo, bằng byte, được gửi cho người nhận. Độ dài theo số thập phân của hệ 8. Ví dụ: Content-Length: 4514
+- Cookie: chứa cookie HTTP được lưu trữ được liên kết với máy chủ (tức là trước đây được gửi bởi máy chủ với Set-Cookie header hoặc đặt trong JS sử dụng Document.cookie). là tùy chọn và có thể được bỏ qua nếu, ví dụ: Cài đặt quyền riêng tư của trình duyệt block cookie.
 
+      Cú pháp: "Cookie: name=value". Ví dụ: Cookie: PHPSESSID=298zf09hf012fh2.
+      
+- Location: được sử dụng để điều hướng lại người nhận tới một vị trí khác ngoài Reqest-URI. Ví dụ: Location: http://www.tutorialspoint.org../http/index.jsp
+
+# Các kiểu encode data trong POST request:
+
+- application/x-www-form-urlencoded: là kiểu mã hóa mặc định nếu thuộc tính enctype không có giá trị, đại diện cho URL Encoded Form. Tất cả các ký tự được mã hóa trước khi gửi (khoảng trắng được chuyển đổi thành ký hiệu "+" hoặc "%20" và các ký tự đặc biệt được chuyển đổi thành giá trị ASCII HEX).
+
+      Kiểu mã hóa được dùng là kiểu URL Encoded. Hiểu đơn giản thì dữ liệu được biểu diễn dưới dạng (key, value), nối với nhau bằng ký hiệu & thành một chuỗi (long string). Trong mỗi cặp (key, value), key và value tách nhau bởi dấu "="
+      
+      Ở trường Content-Type trên header của request có xác định kiểu mã hóa là application/x-www-form-urlencoded
+
+- multipart/form-data: đại diện cho Multipart form, kiểu mã hóa này được sử dụng khi người dùng muốn tải tệp dữ liệu lên.
+
+      Ngoài giá trị multipart/form-data, ở Content-Type còn có giá trị boundary. Giá trị này do trình duyệt tạo ra. 
+      
+      Mỗi cặp (key, value) được biểu diễn dưới dạng:
+      
+      
+            --<<boundary_value>>
+            Content-Disposition: form-data; name="<<field_name>>"
+
+            <<field_value>>
+            
+
+Như vậy, với kiểu mã hóa application/x-www-form-urlencoded, mỗi cặp (key, value) được phân cách với nhau bằng dấu & cho chép server biết nơi bắt đầu và kết thúc của một tham số. Còn với kiểu multipart/form-data, các giá trị boundary thực hiện công việc này.
+
+- text/plain: Là một kiểu mới trong HTML 5, dữ liệu gửi lên mà ko có mã hóa.
+
+      Kiểu mã hóa này gần giống với kiểu URL encoded forms, ngoại trừ việc các trường của form không được mã hóa khi gửi lên server. Kiểu này không được dùng rộng rãi vì định dạng này có thể đọc được và kém bảo mật.
+
+# Tìm hiểu công cụ Burpsuite
+
+Burp Suite là một trong những công cụ kiểm tra thâm nhập và tìm lỗ hổng phổ biến nhất và thường được sử dụng để kiểm tra bảo mật ứng dụng web. Burp Suite là một công cụ dựa trên proxy được sử dụng để đánh giá tính bảo mật của các ứng dụng dựa trên web và thực hiện kiểm tra thực hành. Nó có các mô đun mạnh mẽ và được đóng gói với các phần mở rộng tùy chọn có thể tăng hiệu quả kiểm tra ứng dụng web. Burp Suite là một công cụ pentest ứng dụng web. Ngoài ra, giao diện của Burp cũng rất trực quan và thân thiện. Chúng ta có thể nhìn rõ request được gửi (Request) cũng như phản hồi từ phía server (Respone)
+
+Một số tính năng nổi bật của Burpsuite:
+
+      + Interception Proxy: được thiết kế để bắt các request từ đó có thể tùy ý sửa đổi trước khi các request này được gửi lên server.
+      + Repeater: cho phép sử dụng một request trước đó và tùy sửa đổi nội dung request một cách nhanh chóng nhiều lần khác nhau.
+      + Intruder: tự động hóa việc gửi hàng loạt các request có chứa các payload tương tự nhau lên server.
+      + Decoder: decode và encode string theo các format khác nhau (URL, Base64, HTML,…).
+      + Comparer: chỉ ra sự khác nhau giữa các requests/responses
+      + Extender: API để mở rộng chức năng của Burp Suite. Bạn có thể download các extensions thông qua Bapp Store.
+      + Spider & Discover Content: crawl link có trong ứng dụng web.
+      + Scanner (chỉ có trong bản Pro): đây là một mô đun khác mạnh mẽ, nó tự động quét các lỗ hổng trong ứng dụng web (XSS, SQLi, Command Injection, File Inclusion,…).
+            
