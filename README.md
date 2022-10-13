@@ -158,9 +158,11 @@ https://stackoverflow.com/questions/28670835/python-socket-client-post-parameter
 
 https://www.internalpointers.com/post/making-http-requests-sockets-python
 
+https://stackoverflow.com/questions/2929532/http-basic-authentication-using-sockets-in-python
 
+https://gist.github.com/saturn99/5e85a100d695dcbd343459d9906f285a
 
-
+https://stackoverflow.com/questions/43408325/how-to-download-image-from-http-server-python-sockets
 
 
 
@@ -215,3 +217,43 @@ Cân bằng tải máy chủ đám mây tăng tốc hiệu suất, duy trì kh�
 https://www.techtarget.com/searchcloudcomputing/definition/cloud-load-balancing
 
 https://www.researchgate.net/figure/Cloud-Load-Balancing-Architecture-System-Model-The-proposed-system-model-based_fig1_317041605
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hệ thống là một trang web hỗ trợ quản lý việc cho thuê truyện trong một cửa hàng. Trong đó, các thành viên hệ thống có thể đăng nhập để thực hiện các chức năng theo vai trò của mình. Khách hàng có thể đăng ký tài khoản trên hệ thống. Nếu khách hàng sử dụng email đã được sử dụng thì hệ thống sẽ báo email đã tồn tại và yêu cầu khách hàng nhập lại một email khác. Sau khi đăng ký tài khoản thành công, khách hàng có thể đăng nhập vào hệ thống và bắt đầu tìm và chọn truyện. Khách hàng nhập từ khóa truyện mình muốn tìm lên thanh tìm kiếm và click vào nút tìm kiếm. Nếu hệ thống báo không có kết quả thì khách hàng cần nhập lại từ khóa khác. Sau khi click nút tìm kiếm hệ thống sẽ hiển thị danh sách tất cả các đầu truyện có chứa từ khóa mà khách hàng vừa nhập. Khách hàng tìm đến đầu truyện mà mình muốn thuê và click vào đó để xem thông tin chi tiết của đầu truyện. Sau khi xem thông tin chi tiết của đầu truyện, khách hàng click vào nút thêm giỏ hàng để thêm đầu truyện đó vào trong giỏ hàng. Khách hàng lặp lại việc tìm và chọn cho đến khi hết các đầu truyện muốn thuê. Sau khi chọn đủ số truyện muốn thuê, khách hàng click vào nút thuê truyện. Hệ thống hiển thị phiếu mượn lên cho khách hàng để khách hàng xác nhận lại thông tin. Khách hàng click nút xác nhận thuê truyện thì hệ thống thông báo khách hàng đã thuê truyện thành công. Sau khi thuê truyện online trên hệ thống thành công, khách hàng có thể đến nhận truyện trực tiếp tại quầy. Khi đến  
+
+
+
+
+
+
+
+
+
+
+
+
