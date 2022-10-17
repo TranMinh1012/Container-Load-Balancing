@@ -255,6 +255,9 @@ https://www.techrepublic.com/article/how-to-allow-ssh-connections-from-lan-and-w
 
 https://bizflycloud.vn/tin-tuc/port-forwarding-la-gi-20220317171809152.htm
 
+https://docs.google.com/document/d/1XJVvX4NvOIyKjpGrrARQHlJ0LrJmixIK/edit#
+
+
 
 
 
