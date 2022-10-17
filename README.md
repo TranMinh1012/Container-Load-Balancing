@@ -250,6 +250,12 @@ Hệ thống là một trang web hỗ trợ quản lý việc cho thuê truyện
 
 
 
+https://www.techrepublic.com/article/how-to-allow-ssh-connections-from-lan-and-wan-on-different-ports/
+
+
+
+
+
 
 
 
