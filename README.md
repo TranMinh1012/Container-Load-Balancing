@@ -262,6 +262,17 @@ https://docs.google.com/document/d/1XJVvX4NvOIyKjpGrrARQHlJ0LrJmixIK/edit#
 
 
 
+#PORT SWIGGER
+
+1. Business logic vulnerabilities
+
+
+
+
+
+
+
+
 
 
 
