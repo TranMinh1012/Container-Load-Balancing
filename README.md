@@ -267,7 +267,7 @@ https://docs.google.com/document/d/1XJVvX4NvOIyKjpGrrARQHlJ0LrJmixIK/edit#
 1. Business logic vulnerabilities
 
 
-
+https://viblo.asia/p/network-load-balancing-nghich-ngom-mot-chut-voi-nlb-eW65GWxY5DO
 
 
 
