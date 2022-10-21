@@ -265,11 +265,46 @@ https://docs.google.com/document/d/1XJVvX4NvOIyKjpGrrARQHlJ0LrJmixIK/edit#
 #PORT SWIGGER
 
 1. Business logic vulnerabilities
+phát sinh vì các nhóm thiết kế và phát triển đưa ra các giả định thiếu sót về cách người dùng sẽ tương tác với ứng dụng. Những giả định xấu này có thể dẫn đến xác thực không đầy đủ của đầu vào người dùng. khi kẻ tấn công đi chệch khỏi hành vi người dùng dự kiến, ứng dụng không thực hiện các bước thích hợp để ngăn chặn điều này và sau đó, không xử lý được tình huống một cách an toàn.
 
+Để tránh các lỗ hổng logic, các nhà phát triển cần phải hiểu toàn bộ ứng dụng.
+
+Phòng chống: 
+
++ Đảm bảo các nhà phát triển và người kiểm tra hiểu tên miền mà ứng dụng phục vụ
+
++ Tránh đưa ra các giả định ngầm về hành vi của người dùng hoặc hành vi của các phần khác của ứng dụng
+
+Các bước làm:
+
+access the lab -> đăng nhập vào tài khoản -> chọn sp lightweight -> click add to cart -> mở giỏ hàng -> bật intercept -> ấn vào dấu trừ -> sửa -1 thành -2
+-> forward -> tắt intercept -> remove sp trong giỏ -> mua lại -> mua thêm 1 sp khác -> bật intercept -> click dấu trừ -> sửa số -> forward -> tắt intercept
+
+
+2. Clickjacking
+ClickJacking là một cuộc tấn công dựa trên giao diện trong đó người dùng bị lừa nhấp vào nội dung hành động trên trang web ẩn bằng cách nhấp vào một số nội dung khác trong trang web dụ. Kỹ thuật phụ thuộc vào việc kết hợp một trang web vô hình, có thể hành động (hoặc nhiều trang) chứa một nút hoặc liên kết ẩn, giả sử, trong một iframe.Các cuộc tấn công nhấp chuột sử dụng CSS để tạo và thao tác các lớp. Kẻ tấn công kết hợp trang web mục tiêu như một lớp iframe được phủ lên trên trang web dụ
+
+Thẻ iFrame trong HTML là những inline frames được sử dụng để chèn một HTML Document bên trong một HTML Document khác. IFrame được sử dụng rộng rãi trong quá trình thiết kế website để chèn nội dung trực tiếp vào trang web từ các nguồn khác như nội dung quảng cáo, các control panel điều khiển,… Chỉ số z xác định thứ tự xếp chồng của các lớp iframe và trang web
+
+phòng chống: X-Frame-Options. Header 
+
+X-Frame-Options: deny. Cấm iframe
+
+X-Frame-Options: sameorigin. Cùng nguồn mới đc dùng
+
+X-Frame-Options: allow-from https://normal-website.com. Cho phép một trang web cụ thể
+
+Các bước làm: login -> proxy -> chọn 1 GET -> test thử trên trình duyệt -> go to exploit server -> sửa file thành /exploit.html -> store -> delivery exploit to victim
+
+3. XXE
+là lỗ hổng bảo mật web cho phép kẻ tấn công can thiệp vào việc xử lý dữ liệu XML của ứng dụng. Nó thường cho phép kẻ tấn công xem các tệp trên hệ thống tệp máy chủ ứng dụng và tương tác với bất kỳ hệ thống back-end hoặc bên ngoài nào mà chính ứng dụng có thể truy cập. 
+
+Các lỗ hổng XXE phát sinh vì đặc điểm kỹ thuật XML chứa các tính năng nguy hiểm và các trình đọc XML hỗ trợ các tính năng này ngay cả khi chúng không được ứng dụng sử dụng thường xuyên.
+
+các bước làm: access lab -> chọn 1 sp -> bật intercept -> check stock -> send to repeter -> tắt intercept -> vào repeter chọn send -> go to exploit server -> paste đoạn giải vào body -> store -> view exploit -> paste đoạn giải vào repeter -> paste link DTD vào -> send là xong
 
 https://viblo.asia/p/network-load-balancing-nghich-ngom-mot-chut-voi-nlb-eW65GWxY5DO
 
-3cQBwmaZ]snc-36\3iMDqXsJ4p_7-4H"
 
 
 
