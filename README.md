@@ -303,6 +303,13 @@ Các lỗ hổng XXE phát sinh vì đặc điểm kỹ thuật XML chứa các 
 
 các bước làm: access lab -> chọn 1 sp -> bật intercept -> check stock -> send to repeter -> tắt intercept -> vào repeter chọn send -> go to exploit server -> paste đoạn giải vào body -> store -> view exploit -> paste đoạn giải vào repeter -> paste link DTD vào -> send là xong
 
+4. CORS
+
+Các bước: access -> nhập tk và mk -> bật intercept -> đên acccountDetails -> send to repeter -> cop đáp án vào exploit server -> store -> delivery -> access log -> 
+
+5. SSRF
+access -> bật intercept -> send to repeter and off -> 
+
 https://viblo.asia/p/network-load-balancing-nghich-ngom-mot-chut-voi-nlb-eW65GWxY5DO
 
 
