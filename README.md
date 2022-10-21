@@ -308,7 +308,7 @@ các bước làm: access lab -> chọn 1 sp -> bật intercept -> check stock -
 Các bước: access -> nhập tk và mk -> bật intercept -> đên acccountDetails -> send to repeter -> cop đáp án vào exploit server -> store -> delivery -> access log -> 
 
 5. SSRF
-access -> bật intercept -> send to repeter and off -> 
+cho phép kẻ tấn công khiến ứng dụng phía máy chủ thực hiện yêu cầu đến một vị trí không mong muốn.
 
 https://viblo.asia/p/network-load-balancing-nghich-ngom-mot-chut-voi-nlb-eW65GWxY5DO
 
