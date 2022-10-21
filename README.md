@@ -265,11 +265,24 @@ https://docs.google.com/document/d/1XJVvX4NvOIyKjpGrrARQHlJ0LrJmixIK/edit#
 #PORT SWIGGER
 
 1. Business logic vulnerabilities
+Phát sinh vì các nhóm thiết kế và phát triển đưa ra các giả định thiếu sót về cách người dùng sẽ tương tác với ứng dụng.
+Những giả định xấu này có thể dẫn đến xác thực không đầy đủ của đầu vào người dùng. khi kẻ tấn công đi chệch khỏi hành vi người dùng dự kiến, ứng dụng không thực hiện các bước thích hợp để ngăn chặn điều này và sau đó, không xử lý được tình huống một cách an toàn.
+
+Phòng chống: Để tránh các lỗ hổng logic, các nhà phát triển cần phải hiểu toàn bộ ứng dụng. 
+
++ Đảm bảo các nhà phát triển và người kiểm tra hiểu tên miền mà ứng dụng phục vụ
+
++ Tránh đưa ra các giả định ngầm về hành vi của người dùng hoặc hành vi của các phần khác của ứng dụng
+
+
+
+
+
 
 
 https://viblo.asia/p/network-load-balancing-nghich-ngom-mot-chut-voi-nlb-eW65GWxY5DO
 
-3cQBwmaZ]snc-36\3iMDqXsJ4p_7-4H"
+
 
 
 
