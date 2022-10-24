@@ -314,6 +314,40 @@ https://viblo.asia/p/network-load-balancing-nghich-ngom-mot-chut-voi-nlb-eW65GWx
 
 
 
+# SSL Pinning
+
+Phía client cần một cách để đảm bảo dù đã root certificate đã được trust, nhưng cái certificate dưới cùng không phải của server thì sẽ không tiến hành kết nối
+=> sử dụng SSL Pinning
+
+# SSL Pinning chống lại man-in-the-middle attack như thế nào? 
+
+Nếu hacker muốn giả mạo làm server, thì hacker vẫn phải trả về cho bạn một chiếc certificate để tiến hành handshake. Cert này không thể là cert của server được vì mỗi certificate đều chứa public key dùng để mã hóa data, và chỉ bên có private key mới giải mã data được (mà hacker thì k có private key của server)
+
+Do đó, để giải mã được data hacker cần phải trả về cho bạn cái certificate mà chính hắn tạo ra. Nếu bạn đã lưu sẵn cái certificate (hoặc public key) chuẩn của server ở phía client rồi thì khi nhận được certificate từ server trong quá trình handshake bạn có thể so sánh 2 certificate với nhau, nếu thấy khác thì không tiến hành kết nối.
+
+# Các cách pinning 
+
+Thực tế bạn có thể thực hiện pinning bằng nhiều cách, phổ biến nhất là 2 cách sau:
+
+      + Pinning certificate: Để luôn cái server certicate ở phía client. Khi handshake mà nhận được certificate từ server thì so sánh xem cái nhận được với cái mình đã lưu có giống nhau không.
+      
+      + Pinning public key: Phía client lấy certificate chuẩn của server về, tách cái public key ra, rồi lưu lại. Khi handshake thì xem public key trong certificate nhận được có giống với cái mình đã lưu không.
+      
+Ưu nhược điểm của 2 phương pháp này: 
+
+      + Pin certificate: Dễ hơn. Bạn so sánh cái certificate lưu ở app với cái certificate nhận được từ server là được.
+      
+      + Pin public key: Linh hoạt hơn, nhưng khó hơn một chút. Bạn phải tách được public key từ certificate của server ra rồi so sánh với public key đang lưu ở client.
+
+# Tại sao pin public key linh hoạt hơn?
+
+Giả sử certificate của server bị hết hạn, hoặc một lý do nào đấy mà cần tạo cert khác cho server
+
+      Nếu bạn dùng certificate pinning, bạn sẽ phải update phía client để thay certificate cũ đang lưu ở client bằng certificate mới
+      
+      Nếu bạn dùng public key pinning thì không cần, vì bạn hoàn toàn có thể tạo ra một certificate mới có public key giống cái cũ
+      
+Như vậy, nếu server của bạn cần thay đổi certificate thường xuyên, thì lựa chọn public key pinning sẽ hợp lý hơn. 
 
 
 
