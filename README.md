@@ -349,7 +349,7 @@ Giả sử certificate của server bị hết hạn, hoặc một lý do nào �
       
 Như vậy, nếu server của bạn cần thay đổi certificate thường xuyên, thì lựa chọn public key pinning sẽ hợp lý hơn. 
 
-
+https://mailapurvpandey.medium.com/ssl-pinning-in-android-90dddfa3e051
 
 
 
