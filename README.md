@@ -359,3 +359,11 @@ https://github.com/minh7721/cms-laravel
 
 https://youtu.be/MFh0Fd7BsjE
 
+
+
+
+
+
+
+https://docs.google.com/document/d/1LhQUmD4JscUbNkM8wf1kWxpYSx8YIF7CTRkqk_qp5Vw/edit
+
